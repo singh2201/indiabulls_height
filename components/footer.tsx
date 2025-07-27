@@ -1,53 +1,61 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="text-2xl font-bold text-orange-400 mb-4">Indiabulls Heights</div>
+            <div className="text-2xl font-bold text-orange-400 mb-4">
+              Indiabulls Heights
+            </div>
             <p className="text-gray-400 mb-4">
               Premium 3BHK luxury apartments in Sector 104, Gurugram. Your dream home awaits with world-class amenities
-              and excellent connectivity.
+              and excellent connectivity to Delhi NCR, Cyber City, and major IT hubs.
             </p>
-            <div className="text-orange-400 font-semibold">+91 78408 52787</div>
+            <div className="text-orange-400 font-semibold">
+              <a href="tel:+917840852787" aria-label="Call Indiabulls Heights sales office">
+                +91 78408 52787
+              </a>
+            </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <a href="#overview" className="hover:text-orange-400 transition-colors">
-                  Project Overview
-                </a>
-              </li>
-              <li>
-                <a href="#amenities" className="hover:text-orange-400 transition-colors">
-                  Amenities
-                </a>
-              </li>
-              <li>
-                <a href="#pricing" className="hover:text-orange-400 transition-colors">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#gallery" className="hover:text-orange-400 transition-colors">
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-orange-400 transition-colors">
-                  Contact
-                </a>
-              </li>
-            </ul>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <nav role="navigation" aria-label="Footer navigation">
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <a href="#overview" className="hover:text-orange-400 transition-colors">
+                    Project Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#amenities" className="hover:text-orange-400 transition-colors">
+                    Amenities
+                  </a>
+                </li>
+                <li>
+                  <a href="#pricing" className="hover:text-orange-400 transition-colors">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="#gallery" className="hover:text-orange-400 transition-colors">
+                    Gallery
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-orange-400 transition-colors">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Project Features</h4>
+            <h3 className="text-lg font-semibold mb-4">Project Features</h3>
             <ul className="space-y-2 text-gray-400">
               <li>3BHK Luxury Apartments</li>
-              <li>Investment Under 2Cr</li>
+              <li>Investment Under ₹2CR</li>
               <li>Premium Amenities</li>
               <li>Sector 104 Location</li>
               <li>Pre-Launch Offers</li>
@@ -55,12 +63,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Location</h4>
-            <p className="text-gray-400 mb-4">
+            <h3 className="text-lg font-semibold mb-4">Location</h3>
+            <address className="text-gray-400 mb-4 not-italic">
               Sector 104, Gurugram
               <br />
               Haryana, India
-            </p>
+            </address>
             <div className="text-sm text-gray-500">
               <p>Excellent connectivity to:</p>
               <ul className="mt-2 space-y-1">

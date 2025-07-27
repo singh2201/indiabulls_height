@@ -29,37 +29,46 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
       }`}
+      role="banner"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-orange-600">Indiabulls</div>
+            <h1 className="text-2xl font-bold text-orange-600">
+              <a href="/" aria-label="Indiabulls Heights - Luxury Apartments in Gurugram">
+                Indiabulls
+              </a>
+            </h1>
             <div className="text-sm text-gray-600 hidden sm:block">Heights</div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             <button
               onClick={() => scrollToSection("overview")}
               className="text-gray-700 hover:text-orange-600 transition-colors"
+              aria-label="Go to Project Overview section"
             >
               Overview
             </button>
             <button
               onClick={() => scrollToSection("amenities")}
               className="text-gray-700 hover:text-orange-600 transition-colors"
+              aria-label="Go to Amenities section"
             >
               Amenities
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
               className="text-gray-700 hover:text-orange-600 transition-colors"
+              aria-label="Go to Pricing section"
             >
               Pricing
             </button>
             <button
               onClick={() => scrollToSection("gallery")}
               className="text-gray-700 hover:text-orange-600 transition-colors"
+              aria-label="Go to Gallery section"
             >
               Gallery
             </button>

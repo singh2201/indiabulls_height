@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { Building, MapPin, Calendar, Award } from "lucide-react"
+import Image from "next/image"
 
 export default function ProjectOverview() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -25,24 +26,33 @@ export default function ProjectOverview() {
   }, [])
 
   return (
-    <section id="overview" ref={sectionRef} className="py-20 bg-gray-50">
+    <section 
+      id="overview" 
+      ref={sectionRef} 
+      className="py-20 bg-gray-50"
+      aria-labelledby="overview-heading"
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <header className="text-center mb-16 animate-on-scroll">
+          <h2 id="overview-heading" className="text-4xl font-bold text-gray-900 mb-4">
             About <span className="text-orange-600">Indiabulls Heights</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A premium residential project offering luxury 3BHK apartments in the prime location of Sector 104, Gurugram.
-            Experience affordable luxury homes with world-class amenities and excellent connectivity.
+            Experience affordable luxury homes with world-class amenities and excellent connectivity to Delhi NCR.
           </p>
-        </div>
+        </header>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="animate-on-scroll">
-            <img
+            <Image
               src="/images/image2.png"
-              alt="Indiabulls Heights Building"
+              alt="Indiabulls Heights luxury apartment building exterior view"
+              width={600}
+              height={400}
               className="w-full h-96 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              priority={false}
+              quality={85}
             />
           </div>
           <div className="animate-on-scroll">

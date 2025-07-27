@@ -47,6 +47,16 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
+    // Track form submission
+    if (typeof window !== 'undefined' && (window as any).trackFormSubmission) {
+      (window as any).trackFormSubmission('contact_form')
+    }
+
+    // Track lead conversion
+    if (typeof window !== 'undefined' && (window as any).trackLead) {
+      (window as any).trackLead()
+    }
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 2000))
 

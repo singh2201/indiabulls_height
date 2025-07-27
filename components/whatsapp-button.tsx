@@ -4,9 +4,17 @@ import { MessageCircle } from "lucide-react"
 
 export default function WhatsAppButton() {
   const handleWhatsAppClick = () => {
+    // Track WhatsApp click
+    if (typeof window !== 'undefined' && (window as any).trackEvent) {
+      (window as any).trackEvent('whatsapp_click', {
+        event_category: 'contact',
+        event_label: 'floating_whatsapp_button'
+      })
+    }
+
     const phoneNumber = "917840852787"
     const message = encodeURIComponent(
-      "Hi! I am interested in Indiabulls Heights, Sector 104, Gurugram. Please share more details.",
+      "Hi! I am interested in Indiabulls Heights, Sector 104, Gurugram. Please share more details about the luxury 3BHK apartments and pricing.",
     )
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
     window.open(whatsappUrl, "_blank")

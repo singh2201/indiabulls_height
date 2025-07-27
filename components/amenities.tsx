@@ -40,17 +40,22 @@ export default function Amenities() {
   }, [])
 
   return (
-    <section id="amenities" ref={sectionRef} className="py-20 bg-white">
+    <section 
+      id="amenities" 
+      ref={sectionRef} 
+      className="py-20 bg-white"
+      aria-labelledby="amenities-heading"
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <header className="text-center mb-16 animate-on-scroll">
+          <h2 id="amenities-heading" className="text-4xl font-bold text-gray-900 mb-4">
             World-Class <span className="text-orange-600">Amenities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Experience luxury living with our comprehensive range of amenities designed to enhance your lifestyle and
-            provide comfort for the entire family.
+            provide the ultimate comfort at Indiabulls Heights, Sector 104 Gurugram.
           </p>
-        </div>
+        </header>
 
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
           {amenities.map((amenity, index) => (

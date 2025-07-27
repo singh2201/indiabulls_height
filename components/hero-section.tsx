@@ -2,13 +2,30 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, MapPin, Home, Star } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 const heroImages = [
-  "/images/hero4.png",
-  "/images/hero1.png",
-  "/images/hero2.png",
-  "/images/hero3.png",
+  {
+    src: "/images/hero4.png",
+    alt: "Indiabulls Heights luxury apartment exterior view in Sector 104 Gurugram",
+    priority: true
+  },
+  {
+    src: "/images/hero1.png", 
+    alt: "Indiabulls Heights modern amenities and facilities",
+    priority: false
+  },
+  {
+    src: "/images/hero2.png",
+    alt: "Indiabulls Heights 3BHK apartment interior design",
+    priority: false
+  },
+  {
+    src: "/images/hero3.png",
+    alt: "Indiabulls Heights swimming pool and recreational area",
+    priority: false
+  },
 ]
 
 export default function HeroSection() {
@@ -37,7 +54,11 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section 
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+      id="hero"
+      aria-label="Hero section showcasing Indiabulls Heights luxury apartments"
+    >
       {/* Background Image Carousel */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
@@ -47,10 +68,14 @@ export default function HeroSection() {
               index === currentImage ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
-              src={image || "/placeholder.svg"}
-              alt={`Indiabulls Heights ${index + 1}`}
-              className="w-full blur-sm h-full object-cover"
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover blur-sm"
+              priority={image.priority}
+              quality={90}
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>
@@ -61,12 +86,14 @@ export default function HeroSection() {
       <button
         onClick={prevImage}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-300"
+        aria-label="Previous image"
       >
         <ChevronLeft className="h-6 w-6 text-white" />
       </button>
       <button
         onClick={nextImage}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-all duration-300"
+        aria-label="Next image"
       >
         <ChevronRight className="h-6 w-6 text-white" />
       </button>
@@ -77,7 +104,7 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
             <span className="text-orange-400">Indiabulls Heights</span>
             <br />
-            <span className="text-2xl md:text-4xl">Sector 104, Gurugram</span>
+            <span className="text-2xl md:text-4xl">Luxury Living in Gurugram</span>
           </h1>
 
           <div className="flex items-center justify-center space-x-2 mb-6">

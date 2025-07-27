@@ -2,17 +2,72 @@
 
 import { useState, useEffect, useRef } from "react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 const galleryImages = [
-  { src: "/images/image8.png?height=400&width=600", alt: "Living Room", category: "Interior" },
-  { src: "/images/image2.png?height=400&width=600", alt: "Master Bedroom", category: "Interior" },
-  { src: "/images/image3.png?height=400&width=600", alt: "Kitchen", category: "Interior" },
-  { src: "/images/image4.png?height=400&width=600", alt: "Building Exterior", category: "Exterior" },
-  { src: "/images/image5.png?height=400&width=600", alt: "Swimming Pool", category: "Amenities" },
-  { src: "/images/image6.png?height=400&width=600", alt: "Fitness Center", category: "Amenities" },
-  { src: "/images/image7.png?height=400&width=600", alt: "Parking", category: "Amenities" },
-  { src: "/images/image9.png?height=400&width=600", alt: "Kitchen", category: "Interior" },
-  { src: "/images/image1.png?height=400&width=600", alt: "Balcony View", category: "Interior" },
+  { 
+    src: "/images/image8.png", 
+    alt: "Indiabulls Heights luxury living room interior design with modern furnishing", 
+    category: "Interior",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image2.png", 
+    alt: "Indiabulls Heights spacious master bedroom with premium amenities", 
+    category: "Interior",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image3.png", 
+    alt: "Indiabulls Heights modern kitchen with premium appliances and fittings", 
+    category: "Interior",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image4.png", 
+    alt: "Indiabulls Heights building exterior architecture in Sector 104 Gurugram", 
+    category: "Exterior",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image5.png", 
+    alt: "Indiabulls Heights Olympic-size swimming pool amenity", 
+    category: "Amenities",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image6.png", 
+    alt: "Indiabulls Heights fully equipped fitness center and gymnasium", 
+    category: "Amenities",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image7.png", 
+    alt: "Indiabulls Heights covered parking facilities for residents", 
+    category: "Amenities",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image9.png", 
+    alt: "Indiabulls Heights premium kitchen design with island counter", 
+    category: "Interior",
+    width: 600,
+    height: 400
+  },
+  { 
+    src: "/images/image1.png", 
+    alt: "Indiabulls Heights apartment balcony view overlooking Sector 104 Gurugram", 
+    category: "Interior",
+    width: 600,
+    height: 400
+  },
 ]
 
 const categories = ["All", "Interior", "Exterior", "Amenities"]

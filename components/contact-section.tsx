@@ -78,12 +78,12 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Contact Information */}
           <div className="animate-on-scroll">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+            <h3 className="mx-12 text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
 
-            <div className="space-y-6">
+            <div className="grid lg:grid-cols-3 mx-12  md:grid-cols-2 grid-cols-1 gap-12 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="bg-orange-100 p-3 rounded-lg">
                   <Phone className="h-6 w-6 text-orange-600" />
@@ -118,17 +118,6 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Google Maps Embed */}
-            <div className="mt-8">
-              <h4 className="font-semibold text-gray-900 mb-4">Location Map</h4>
-              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <MapPin className="h-12 w-12 mx-auto mb-2" />
-                  <p>Interactive Map</p>
-                  <p className="text-sm">Sector 104, Gurugram</p>
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
